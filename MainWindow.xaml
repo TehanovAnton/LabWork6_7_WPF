@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LabWork6_7"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="400">
+        Title="wpf" Height="800" Width="400">
     <Border Padding="10">
         <StackPanel Margin="0,10,0,-6">
             <!--Buttons-->
@@ -16,8 +16,8 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button Margin="0 0 10 0" Grid.Column="0" Content="Aply"/>
-                <Button Grid.Column="1" Content="Reset"/>
+                <Button x:Name="AplyButton" Click="AplyButton_Click" Margin="0 0 10 0" Grid.Column="0" Content="Aply"/>
+                <Button x:Name="Reset" Click="Reset_Click" Grid.Column="1" Content="Reset"/>
                 <Button Margin="10 0 0 0" Grid.Column="2" Content="Refresh"/>
             </Grid>
 
@@ -25,7 +25,7 @@
             
             <!--Description-->
             <TextBlock Text="Description"/>
-            <TextBox Padding="2"/>
+            <TextBox x:Name="Description"  Padding="2"/>
             
             <!--Status and Revision-->
             <Grid>
@@ -47,6 +47,80 @@
                 </StackPanel>
             </Grid>
             
+            <!--Part Number-->
+            <TextBlock Text="Part Number"/>
+            <TextBox IsReadOnly="True" Background="#eee" Padding="2"/>
+
+            <!--Raw Material-->
+            <TextBlock Text="Raw Material" FontWeight="Bold" Margin="0 10"/>
+            <TextBlock Text="Material"/>
+            <ComboBox Padding="2"/>
+
+            <!--Manufacturing information-->
+            <TextBlock Text="Manufacturing information" FontWeight="Bold" Margin="0 10"/>
+            <TextBlock Text="Work Centers"/>
+
+            <!--CheckBoxes-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Margin="0 0 10 0">
+                    <CheckBox x:Name="Weld" Checked="Weld_Checked" Content="Weld"/>
+                    <CheckBox Content="ASsembly"/>
+                    <CheckBox Content="Plasma"/>
+                    <CheckBox Content="Laser"/>
+                    <CheckBox Content="PUrchase"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1">
+                    <CheckBox Content="Lathe"/>
+                    <CheckBox Content="Drile"/>
+                    <CheckBox Content="Fold"/>
+                    <CheckBox Content="Roll"/>
+                    <CheckBox Content="Saw"/>
+                </StackPanel>
+            </Grid>
+           
+            <!--Length-->
+            <TextBlock Text="Length" Margin="0 10 0 0"/>
+            <TextBox x:Name="Length" Padding="2"/>
+
+            <!--Math-->
+            <TextBlock Text="Mass" />
+            <TextBox IsReadOnly="True" Background="#eee" Padding="2"/>
+
+            <!--Finish-->
+            <TextBlock Text="Finish"/>
+            <ComboBox x:Name="Finish" SelectionChanged="Finish_SelectionChanged" SelectedIndex="0" Padding="2">
+                <ComboBoxItem>Paited</ComboBoxItem>
+                <ComboBoxItem>Not Paited</ComboBoxItem>
+            </ComboBox>
+
+            <!--Note-->
+            <TextBlock Text="Note"/>
+            <TextBox x:Name="Note" Padding="2"/>
+
+
+            <!--Purchase information-->
+            <TextBlock Text="Purchase information"/>
+            <ComboBox SelectedIndex="0" Padding="2">
+                <ComboBoxItem>Rubber</ComboBoxItem>
+                <ComboBoxItem>Not Rubber</ComboBoxItem>
+            </ComboBox>
+
+            <!--Supply Name-->
+            <TextBlock Text="Supply Name" Margin="0 10 0 0"/>
+            <TextBox Padding="2"/>
+
+            <!--Supply Code-->
+            <TextBlock Text="Supply Code" Margin="0 10 0 0"/>
+            <TextBox Padding="2"/>
+
+            <!--Additional information-->
+            <TextBlock Text="Additional information" FontWeight="Bold" Margin="0 10"/>
         </StackPanel>
     </Border>
 </Window>
