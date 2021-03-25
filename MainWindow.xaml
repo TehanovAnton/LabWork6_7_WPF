@@ -22,6 +22,31 @@
             </Grid>
 
             <TextBlock Text="Pulse Properies" FontWeight="Bold" Margin="0 10"/>
+            
+            <!--Description-->
+            <TextBlock Text="Description"/>
+            <TextBox Padding="2"/>
+            
+            <!--Status and Revision-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!--Status-->
+                <StackPanel Grid.Column="0" Margin="0 0 10 0">
+                    <TextBlock Text="Staus"/>
+                    <TextBox IsReadOnly="True" Background="#eee" Padding="2"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" >
+                    <!--Revision-->
+                    <TextBlock  Text="Revision"/>
+                    <TextBox IsReadOnly="True" Background="#eee" Padding="2"/>
+                </StackPanel>
+            </Grid>
+            
         </StackPanel>
     </Border>
 </Window>
