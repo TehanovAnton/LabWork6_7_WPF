@@ -24,31 +24,5 @@ namespace LabWork6_7
         {
             InitializeComponent();
         }
-
-        private void AplyButton_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show(this.Description.Text);
-        }
-
-        private void Reset_Click(object sender, RoutedEventArgs e)
-        {
-            this.Weld.IsChecked = false;
-        }
-
-        private void Weld_Checked(object sender, RoutedEventArgs e)
-        {
-            this.Length.Text += (string)((CheckBox)sender).Content;
-        }
-
-        private void Finish_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (this.Note == null)
-                return;
-
-            var combo = (ComboBox)sender;
-            var comboItem = (ComboBoxItem)combo.SelectedValue;
-
-            this.Note.Text = (string)comboItem.Content;
-        }
     }
 }
