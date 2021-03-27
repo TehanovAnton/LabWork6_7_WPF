@@ -24,5 +24,15 @@ namespace LabWork6_7
         {
             InitializeComponent();
         }
+
+        private void AddProductButton_Click(object sender, RoutedEventArgs e)
+        {
+            var textBlock = new TextBlock()
+            {
+                Text = "this is info"
+            };
+
+            this.infoWin.Children.Add(textBlock);
+        }
     }
 }

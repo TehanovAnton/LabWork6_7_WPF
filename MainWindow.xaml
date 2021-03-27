@@ -5,18 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LabWork6_7"
         mc:Ignorable="d"
-        Title="wpf" Height="800" Width="600">
+        Title="wpf" Height="450" Width="800">
     <StackPanel Orientation="Vertical">
         <TextBlock Text="Интернет магазин концелярских товаров"/>
 
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="3*"/>
-                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="1.75*"/>
+                <ColumnDefinition Width="6.25*"/>
             </Grid.ColumnDefinitions>
-
-            <!--меню магазина-->
+            
             <StackPanel Margin="10 10 10 10" Grid.Column="0" Orientation="Vertical">
+                <!--концелярия-->
                 <GroupBox Width="130" Header="Концелярия" HorizontalAlignment="Left">
                     <TreeView BorderBrush="White">
                         <!--элементы меню-->
@@ -26,7 +26,7 @@
                             <Button Content="для рисования"/>
                             <Button Content="бумажные принадлежности"/>
                         </TreeViewItem>
-                        <Button Content="добавить товар"/>
+                        <Button Click="AddProductButton_Click" Content="добавить товар"/>
                         <Button Content="моя корзина"/>
                     </TreeView>
                 </GroupBox>
@@ -43,10 +43,6 @@
                         <RadioButton Grid.Column="0" Content="light" Margin="0 5 5 5"/>
                         <RadioButton Grid.Column="1" Content="black" Margin="0 5 10 5"/>
                     </Grid>
-                    <!--<StackPanel Orientation="Horizontal">
-                        <RadioButton Content="light" Margin="0 5 5 5"/>
-                        <RadioButton Content="black" Margin="0 5 10 5"/>
-                    </StackPanel>-->
                 </GroupBox>
 
                 <!--выбор языка-->
@@ -60,18 +56,14 @@
                         <RadioButton Grid.Column="0" Content="Ru" Margin="0 5 5 5"/>
                         <RadioButton Grid.Column="1" Content="Eng" Margin="0 5 10 5"/>
                     </Grid>
-                    <!--<StackPanel Orientation="Horizontal">
-                        <RadioButton Content="Ru" Margin="5 5 10 5"/>
-                        <RadioButton Content="Eng" Margin="0 5 5 5"/>
-                    </StackPanel>-->
                 </GroupBox>
             </StackPanel>
             
             <!--информационное окно-->
-            <StackPanel Grid.Column="1" Orientation="Vertical">
-                
+            <StackPanel x:Name="infoWin" Grid.Column="1" Orientation="Vertical">
             </StackPanel>
         </Grid>
-        
+
+        <TextBlock Text="hello world"/>
     </StackPanel>
 </Window>
