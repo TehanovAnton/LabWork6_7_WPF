@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -13,18 +11,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LabWork6_7
+namespace LabWork6_7.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для Welcome.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Welcome : UserControl
     {
-        public MainWindow()
+        public Welcome()
         {
             InitializeComponent();
-
-            DataContext = new MainViewModel();
         }
-    }    
+    }
 }
