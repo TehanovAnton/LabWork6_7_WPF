@@ -24,7 +24,7 @@ namespace LabWork6_7
         {
             InitializeComponent();
 
-            DataContext = new MainViewModel();
+            DataContext = new ApplicationViewModel();
         }
     }    
 }

@@ -16,7 +16,7 @@ namespace LabWork6_7.Pages
     /// <summary>
     /// Логика взаимодействия для Welcome.xaml
     /// </summary>
-    public partial class Welcome : UserControl
+    public partial class Welcome : Page
     {
         public Welcome()
         {

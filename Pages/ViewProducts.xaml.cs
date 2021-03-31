@@ -14,17 +14,15 @@ using System.Windows.Shapes;
 namespace LabWork6_7.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для AddProduct.xaml
+    /// Логика взаимодействия для ViewProducts.xaml
     /// </summary>
-    public partial class AddProduct : Page
+    public partial class ViewProducts : Page
     {
-        static string imgPath = @"C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork6_7(WPF)\Images\Add_Photo_Icon.png";
-
-        public AddProduct()
+        public ViewProducts()
         {
             InitializeComponent();
 
-            this.photo.SetValue(Image.SourceProperty, (new ImageSourceConverter()).ConvertFromString(imgPath));
+            DataContext = new ViewProductModel();
         }
     }
 }

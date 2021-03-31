@@ -40,3 +40,5 @@ C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решени�
 C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork6_7(WPF)\obj\Debug\netcoreapp3.1\Pages\Welcome.baml
 C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork6_7(WPF)\obj\Debug\netcoreapp3.1\Pages\AddProduct.g.cs
 C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork6_7(WPF)\obj\Debug\netcoreapp3.1\Pages\AddProduct.baml
+C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork6_7(WPF)\obj\Debug\netcoreapp3.1\Pages\ViewProducts.g.cs
+C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork6_7(WPF)\obj\Debug\netcoreapp3.1\Pages\ViewProducts.baml

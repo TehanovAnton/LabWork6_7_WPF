@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork6_7(WPF)\App.xaml
-3-954757134
+4-973499906
 
-10431645100
+12177150732
 1921654412462
-MainWindow.xaml;Pages\AddProduct.xaml;Pages\Welcome.xaml;
+MainWindow.xaml;Pages\AddProduct.xaml;Pages\ViewProducts.xaml;Pages\Welcome.xaml;
 
-True
+False
 

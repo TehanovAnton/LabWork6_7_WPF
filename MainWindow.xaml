@@ -31,9 +31,15 @@
 
                         <Button x:Name="AddProduct" Content="добавить товар"
                                 Margin="3 3 3 3"
-                                Command="{Binding AddProduct_Click}" />
+                                Command="{Binding SetAddProductPage}" />
+                        
                         <Button Content="моя корзина" 
-                                Margin="3 3 3 3"/>
+                                Margin="3 3 3 3"
+                                />
+
+                        <Button Content="посмотреть товары" 
+                                Margin="3 3 3 3"
+                                Command="{Binding SetViewProductPage}"/>
                     </TreeView>
                 </GroupBox>
 
@@ -64,13 +70,13 @@
                     </Grid>
                 </GroupBox>
             </StackPanel>
-
-            <ContentControl Grid.Column="1" Content="{Binding CurentPage}"/>
-            <!--<Frame 
+           
+            <Frame 
                 Grid.Column="1"
-                Content="{Binding CurentPage}"
                 NavigationUIVisibility="Hidden" 
-                Opacity="{Binding FrameOpacity}" />-->
+                Background="White"
+                Content="{Binding CurrentInfoPage,
+                    UpdateSourceTrigger=PropertyChanged}"/>
         </Grid>
     </StackPanel>
 </Window>
