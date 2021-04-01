@@ -38,7 +38,7 @@
             <TextBox Text="{Binding Producer, UpdateSourceTrigger=PropertyChanged}" />
 
             <TextBlock Text="Описание" />
-            <TextBox Text="{Binding Discriiption, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBox Text="{Binding Discription, UpdateSourceTrigger=PropertyChanged}" />
         </StackPanel>
     </Grid>
 </Page>
