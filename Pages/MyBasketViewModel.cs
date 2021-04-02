@@ -4,32 +4,29 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
-using System.Windows;
 
 namespace LabWork6_7.Pages
 {
-    public class ViewProductModel : INotifyPropertyChanged
-    {      
-
+    class MyBasketViewModel : INotifyPropertyChanged
+    {
         private Product selectedProduct;
-        public ProductsViewModel products { get; set; }
+        public ObservableCollection<Product> products { get; set; }
 
 
         public Product SelectedProduct
         {
-            get {
-                return selectedProduct; }
-            set 
+            get { return selectedProduct; }
+            set
             {
                 selectedProduct = value;
                 OnPropertyChanged("SelectedProduct");
             }
         }
 
-
-        public ViewProductModel()
+        
+        public MyBasketViewModel()
         {
-            products = ProductsViewModel.GetInstance();
+            products = new ObservableCollection<Product>(ProductsViewModel.GetInstance().Products);
         }
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName] string prop = "")

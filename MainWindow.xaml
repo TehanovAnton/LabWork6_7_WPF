@@ -6,6 +6,21 @@
         xmlns:local="clr-namespace:LabWork6_7"
         mc:Ignorable="d"
         Title="wpf" Height="450" Width="800">
+
+    <Window.Resources>
+        <Style x:Key="RegularButton">
+            <Setter Property="ItemsControl.BorderBrush" Value="White"/>
+            <Setter Property="ItemsControl.Background" Value="White"/>
+            <Setter Property="ItemsControl.HorizontalContentAlignment" Value="left"/>
+            <Setter Property="ItemsControl.Margin" Value="14 3 3 3"/>
+        </Style>
+
+        <Style x:Key="RegularGroupBox">
+            <Setter Property="ItemsControl.HorizontalAlignment" Value="Center"/>
+            <Setter Property="ItemsControl.BorderBrush" Value="Black"/>
+        </Style>
+    </Window.Resources>
+
     <StackPanel Orientation="Vertical">
         
         <TextBlock Text="Интернет магазин концелярских товаров" />
@@ -17,34 +32,27 @@
             </Grid.ColumnDefinitions>
 
             <StackPanel Margin="10 10 10 10" Grid.Column="0" Orientation="Vertical">
-                <!--концелярия-->
-                <GroupBox Width="130" Header="Концелярия" HorizontalAlignment="Left">
-                    <TreeView BorderBrush="White">
-                        <!--элементы меню-->
-                        <TreeViewItem Header="категории">
-                            <Button Content="для письма" />
-                            <Button Content="для черечения" />
-                            <Button Content="для рисования" />
-                            <Button Content="бумажные принадлежности" />
-                        </TreeViewItem>
+                <Button Content="каталог"
+                                Command="{Binding SetCatalogPage}"
+                                Style="{StaticResource RegularButton}"/>
+                
+                <Button Content="добавить товар"
+                                
+                                Command="{Binding SetAddProductPage}"
+                                Style="{StaticResource RegularButton}"/>
 
+                <Button Content="моя корзина"
+                        Command="{Binding SetMyBasket}"
+                        Style="{StaticResource RegularButton}"/>
 
-                        <Button x:Name="AddProduct" Content="добавить товар"
-                                Margin="3 3 3 3"
-                                Command="{Binding SetAddProductPage}" />
-                        
-                        <Button Content="моя корзина" 
-                                Margin="3 3 3 3"
-                                />
-
-                        <Button Content="посмотреть товары" 
-                                Margin="3 3 3 3"
-                                Command="{Binding SetViewProductPage}"/>
-                    </TreeView>
-                </GroupBox>
-
+                <Button Content="посмотреть товары" 
+                                
+                                Command="{Binding SetViewProductPage}"
+                                Style="{StaticResource RegularButton}"/>
+                
                 <!--выбор темы-->
-                <GroupBox Width="130" Header="Тема" HorizontalAlignment="Left">
+                <GroupBox Width="130" Header="Тема"
+                          Style="{StaticResource RegularGroupBox}">
 
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -58,7 +66,8 @@
                 </GroupBox>
 
                 <!--выбор языка-->
-                <GroupBox Width="130" Header="Язык" HorizontalAlignment="Left">
+                <GroupBox Width="130" Header="Язык"
+                          Style="{StaticResource RegularGroupBox}">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />

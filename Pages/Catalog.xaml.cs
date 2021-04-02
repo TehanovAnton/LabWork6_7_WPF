@@ -14,15 +14,13 @@ using System.Windows.Shapes;
 namespace LabWork6_7.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для AddProduct.xaml
+    /// Логика взаимодействия для Catalog.xaml
     /// </summary>
-    public partial class AddProduct : Page
+    public partial class Catalog : Page
     {
-        public AddProduct()
+        public Catalog()
         {
             InitializeComponent();
-
-            DataContext = new AddProductPageViewModel();
         }
     }
 }

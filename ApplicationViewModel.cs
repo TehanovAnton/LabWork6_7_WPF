@@ -10,9 +10,13 @@ namespace LabWork6_7
 {
     public class ApplicationViewModel : INotifyPropertyChanged
     {
-        private Page addProductPage;
+        private ProductsViewModel products;
+
         private Page viewProductPage;
         private Page currentInfoPage;
+        private Page addRroductPage;
+        private Page myBasketPage;
+        private Page catatlogPage;
 
         public Page CurrentInfoPage
         {
@@ -21,15 +25,6 @@ namespace LabWork6_7
             {
                 currentInfoPage = value;
                 OnPropertyChanged("CurrentInfoPage");
-            }
-        }
-        public Page AddProductPage
-        {
-            get { return addProductPage; }
-            set 
-            {
-                addProductPage = value;
-                OnPropertyChanged("AddProductPage");
             }
         }
         public Page ViewProductPage
@@ -41,6 +36,36 @@ namespace LabWork6_7
                 OnPropertyChanged("ViewProductPage");
             }
         }
+        public Page AddProductPage
+        {
+            get { return addRroductPage; }
+            set
+            {
+                addRroductPage = value;
+                OnPropertyChanged("AddRroductPage");
+            }
+        }
+        public Page MyBasketPage
+        {
+            get { return myBasketPage; }
+            set
+            {
+                myBasketPage = value;
+                OnPropertyChanged("MyBasketPage");
+            }
+        }
+        public Page CatatlogPage
+        {
+            get
+            {
+                return catatlogPage;
+            }
+            set
+            {
+                catatlogPage = value;
+                OnPropertyChanged("CatatlogPage");
+            }
+        }
 
 
         private RelayCommand setAddProductPage;
@@ -49,11 +74,10 @@ namespace LabWork6_7
             get
             {
                 return setAddProductPage ?? (new RelayCommand(
-                        obj =>
-                        {
-                            CurrentInfoPage = AddProductPage;
-                        }
-                    ));
+                    obj =>
+                    {
+                        CurrentInfoPage = AddProductPage;
+                    }));
             }
         }
 
@@ -73,15 +97,51 @@ namespace LabWork6_7
         }
 
 
+        private RelayCommand setMyBasket;
+        public RelayCommand SetMyBasket
+        {
+            get
+            {
+                return setMyBasket ?? (setMyBasket = new RelayCommand(
+                        obj =>
+                        {
+                            CurrentInfoPage = MyBasketPage;
+                        }
+                    ));
+            }
+        }
+
+
+        private RelayCommand setCatalogPage;
+        public RelayCommand SetCatalogPage
+        {
+            get
+            {
+                return setCatalogPage ?? (setCatalogPage = new RelayCommand(
+                        obj =>
+                        {
+                            CurrentInfoPage = CatatlogPage;
+                        }
+                    ));
+            }
+        }
+
+
         public ApplicationViewModel()
         {
-            addProductPage = new Pages.AddProduct();
+            products = ProductsViewModel.GetInstance();
+
+            AddProductPage = new Pages.AddProduct();
+            myBasketPage = new Pages.MyBasket();
             viewProductPage = new Pages.ViewProducts();
             currentInfoPage = new Pages.Welcome();
+            catatlogPage = new Pages.Catalog();
 
-            AddProductPage = addProductPage;
+            AddProductPage = AddProductPage;
             ViewProductPage = viewProductPage;
+            MyBasketPage = myBasketPage;
             CurrentInfoPage = currentInfoPage;
+            CatatlogPage = catatlogPage;
         }
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName] string prop = "")

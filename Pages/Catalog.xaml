@@ -1,0 +1,48 @@
+﻿<Page x:Class="LabWork6_7.Pages.Catalog"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:LabWork6_7.Pages"
+      mc:Ignorable="d"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Catalog">
+
+    <Page.Resources>
+        <Style x:Key="RegularButton">
+            <Setter Property="ItemsControl.BorderBrush" Value="White" />
+            <Setter Property="ItemsControl.Background" Value="White" />
+            <Setter Property="ItemsControl.HorizontalContentAlignment" Value="Center" />
+            <Setter Property="ItemsControl.Margin" Value="50" />
+            <Setter Property="ItemsControl.Width" Value="100" />
+            <Setter Property="ItemsControl.Height" Value="100" />
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="ListIcon" Grid.Column="0" Grid.Row="0" Style="{StaticResource RegularButton}">
+            <Image Source="C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork6_7(WPF)\Images\ListIcon.jpg"></Image>
+        </Button>
+
+        <Button x:Name="DrowingIcon" Grid.Column="0" Grid.Row="1" Style="{StaticResource RegularButton}">
+            <Image Source="C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork6_7(WPF)\Images\DrowingIcon.svg"></Image>
+        </Button>
+
+        <Button x:Name="PecilIcon" Grid.Column="1" Grid.Row="0" Style="{StaticResource RegularButton}">
+            <Image Source="C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork6_7(WPF)\Images\MechdrawingIcon.jpg"></Image>
+        </Button>
+
+        <Button x:Name="MtchdroingIconIcon" Grid.Column="1" Grid.Row="1" Style="{StaticResource RegularButton}">
+            <Image Source="C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork6_7(WPF)\Images\PencilIcon.jpg"></Image>
+        </Button>
+    </Grid>
+</Page>

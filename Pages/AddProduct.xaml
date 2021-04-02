@@ -17,30 +17,43 @@
 
         <!--фото-->
         <StackPanel Grid.Column="0">
-            <Image x:Name="photo"
-                   Margin="5 5 5 5"
-                   Height="{Binding AddPhotoIcon_Height}"/>
+            <Image Source="..\..\Images\Add_Photo_Icon.png"
+                   Margin="5 5 5 5"/>
         </StackPanel>
 
         <!--параметры нового продукта-->
         <Grid Grid.Column="1">
 
             <!--поля продукта-->
-            <StackPanel >
+            <StackPanel>
 
-                <GroupBox x:Name="productName" Header="Название">
-                    <TextBox Margin="3 3 3 3" BorderBrush="White"/>
+                <GroupBox Header="Название">
+                    <TextBox Margin="3 3 3 3" BorderBrush="White"
+                             Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}"/>
                 </GroupBox>
 
-                <GroupBox x:Name="productProducer" Header="Производитель">
-                    <TextBox Margin="3 3 3 3" BorderBrush="White"/>
+                <GroupBox Header="Производитель">
+                    <TextBox Margin="3 3 3 3" BorderBrush="White"
+                             Text="{Binding Producer, UpdateSourceTrigger=PropertyChanged}"/>
                 </GroupBox>
 
-                <GroupBox x:Name="productDiscription" Header="Описание">
-                    <TextBox Margin="3 3 3 3" BorderBrush="White"/>
+                <GroupBox Header="Описание">
+                    <TextBox Margin="3 3 3 3" BorderBrush="White"
+                             Text="{Binding Discription, UpdateSourceTrigger=PropertyChanged}"/>
                 </GroupBox>
 
-                <Button Content="Ok" Margin="1 3 1 3"/>
+                <GroupBox Header="Категория">
+                    <TextBox Margin="3 3 3 3" BorderBrush="White"
+                             Text="{Binding Section, UpdateSourceTrigger=PropertyChanged}"/>
+                </GroupBox>
+
+                <GroupBox Header="Цена">
+                    <TextBox Margin="3 3 3 3" BorderBrush="White"
+                             Text="{Binding Prise, UpdateSourceTrigger=PropertyChanged}"/>
+                </GroupBox>
+
+                <Button Content="Ok" Margin="1 3 1 3"
+                        Command="{Binding AddNew}"/>
 
             </StackPanel>
             
