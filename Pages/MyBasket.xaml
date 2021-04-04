@@ -29,6 +29,8 @@
                         <TextBlock FontSize="18" Text="{Binding Path=Title}" />
                         <TextBlock Text="{Binding Path=Producer}" />
                         <TextBlock Text="{Binding Path=Discription}" />
+                        <TextBlock Text="{Binding Path=Section}" />
+                        <TextBlock Text="{Binding Path=Prise}" />
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
@@ -37,17 +39,27 @@
         <StackPanel Grid.Column="1" DataContext="{Binding SelectedProduct}">
             <TextBlock Text="Выбранный элемент" />
 
-            <TextBlock Text="Модель" />
+            <TextBlock Text="Название" />
             <TextBlock Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}" 
                        Style="{StaticResource TextBlockFont}"/>
+                        
+            <TextBlock Text="Описание" />
+            <TextBlock Text="{Binding Discription, UpdateSourceTrigger=PropertyChanged}"
+                       Style="{StaticResource TextBlockFont}"/>
+
 
             <TextBlock Text="Производитель" />
             <TextBlock Text="{Binding Producer, UpdateSourceTrigger=PropertyChanged}"
                        Style="{StaticResource TextBlockFont}"/>
 
-            <TextBlock Text="Описание" />
-            <TextBlock Text="{Binding Discription, UpdateSourceTrigger=PropertyChanged}" 
+            <TextBlock Text="Категория" />
+            <TextBlock Text="{Binding Section, UpdateSourceTrigger=PropertyChanged}" 
                        Style="{StaticResource TextBlockFont}"/>
+            
+            <TextBlock Text="Цена" />
+            <TextBlock Text="{Binding Prise, UpdateSourceTrigger=PropertyChanged}" 
+                       Style="{StaticResource TextBlockFont}"/>
+
         </StackPanel>
     </Grid>
 </Page>

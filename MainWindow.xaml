@@ -8,11 +8,12 @@
         Title="wpf" Height="450" Width="800">
 
     <Window.Resources>
-        <Style x:Key="RegularButton">
+        <Style x:Key="MenuButton">
             <Setter Property="ItemsControl.BorderBrush" Value="White"/>
             <Setter Property="ItemsControl.Background" Value="White"/>
             <Setter Property="ItemsControl.HorizontalContentAlignment" Value="left"/>
             <Setter Property="ItemsControl.Margin" Value="14 3 3 3"/>
+            <Setter Property="ItemsControl.HorizontalAlignment" Value="Left"/>
         </Style>
 
         <Style x:Key="RegularGroupBox">
@@ -22,8 +23,9 @@
     </Window.Resources>
 
     <StackPanel Orientation="Vertical">
-        
-        <TextBlock Text="Интернет магазин концелярских товаров" />
+
+        <TextBlock Text="Интернет магазин концелярских товаров"
+                   HorizontalAlignment="Center"/>
 
         <Grid>
             <Grid.ColumnDefinitions>
@@ -32,24 +34,31 @@
             </Grid.ColumnDefinitions>
 
             <StackPanel Margin="10 10 10 10" Grid.Column="0" Orientation="Vertical">
-                <Button Content="каталог"
-                                Command="{Binding SetCatalogPage}"
-                                Style="{StaticResource RegularButton}"/>
-                
-                <Button Content="добавить товар"
-                                
-                                Command="{Binding SetAddProductPage}"
-                                Style="{StaticResource RegularButton}"/>
 
-                <Button Content="моя корзина"
-                        Command="{Binding SetMyBasket}"
-                        Style="{StaticResource RegularButton}"/>
 
-                <Button Content="посмотреть товары" 
-                                
-                                Command="{Binding SetViewProductPage}"
-                                Style="{StaticResource RegularButton}"/>
-                
+                <Button x:Name="chancellery" Style="{StaticResource MenuButton}"
+                        Command="{Binding SetCatalogPage}">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="\Images\сhancelleryIcon.ico" Width="35" Height="35" Margin="0 0 5 0" />
+                        <TextBlock Text="концелярия" VerticalAlignment="center" />
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="addProduct" Style="{StaticResource MenuButton}"
+                        Command="{Binding SetAddProductPage}">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="\Images\AddProductIcon.ico" Width="35" Height="35" Margin="0 0 5 0" />
+                        <TextBlock Text="добавить товар" VerticalAlignment="center" />
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="myBasket" Style="{StaticResource MenuButton}"
+                        Command="{Binding SetMyBasket}">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="\Images\MyBasketIcon.ico" Width="35" Height="35" Margin="0 0 5 0" />
+                        <TextBlock Text="моя корзина" VerticalAlignment="center" />
+                    </StackPanel>
+                </Button>
                 <!--выбор темы-->
                 <GroupBox Width="130" Header="Тема"
                           Style="{StaticResource RegularGroupBox}">
@@ -84,8 +93,8 @@
                 Grid.Column="1"
                 NavigationUIVisibility="Hidden" 
                 Background="White"
-                Content="{Binding CurrentInfoPage,
-                    UpdateSourceTrigger=PropertyChanged}"/>
+                Content="{Binding CurrentInfoPage
+                    }"/>
         </Grid>
     </StackPanel>
 </Window>

@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace LabWork6_7
 {
-    public class Product
+    public class Product : INotifyPropertyChanged
     {
         private string title;
         private string producer;
@@ -21,6 +23,7 @@ namespace LabWork6_7
             set
             {
                 title = value;
+                OnPropertyChanged("Title");
             }
         }
         public string Producer
@@ -32,6 +35,7 @@ namespace LabWork6_7
             set
             {
                 producer = value;
+                OnPropertyChanged("Producer");
             }
         }
         public string Discription
@@ -43,6 +47,7 @@ namespace LabWork6_7
             set
             {
                 discription = value;
+                OnPropertyChanged("Discription");
             }
         }
         public string Section 
@@ -54,6 +59,7 @@ namespace LabWork6_7
             set
             {
                 section = value;
+                OnPropertyChanged("Section");
             }
         }
         public int Prise
@@ -65,6 +71,7 @@ namespace LabWork6_7
             set
             {
                 prise = value;
+                OnPropertyChanged("Prise");
             }
         }
 
@@ -77,5 +84,11 @@ namespace LabWork6_7
             this.prise = prise;
         }
         public Product() { }
+        public event PropertyChangedEventHandler PropertyChanged;
+        public void OnPropertyChanged([CallerMemberName] string prop = "")
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(prop));
+        }
     }
 }

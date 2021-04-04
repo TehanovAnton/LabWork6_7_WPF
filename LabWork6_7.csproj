@@ -7,11 +7,27 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\AddProductIcon.ico" />
     <None Remove="Images\Add_Photo_Icon.png" />
+    <None Remove="Images\ListIcon.jpg" />
+    <None Remove="Images\MechdrawingIcon.jpg" />
+    <None Remove="Images\MyBasketIcon.ico" />
+    <None Remove="Images\PencilIcon.jpg" />
+    <None Remove="Images\сhancelleryIcon.ico" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\AddProductIcon.ico" />
     <Resource Include="Images\Add_Photo_Icon.png" />
+    <Resource Include="Images\ListIcon.jpg" />
+    <Resource Include="Images\MechdrawingIcon.jpg" />
+    <Resource Include="Images\MyBasketIcon.ico" />
+    <Resource Include="Images\PencilIcon.jpg" />
+    <Resource Include="Images\сhancelleryIcon.ico" />
   </ItemGroup>
 
 </Project>

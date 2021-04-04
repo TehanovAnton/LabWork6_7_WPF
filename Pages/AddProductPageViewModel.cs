@@ -10,7 +10,7 @@ namespace LabWork6_7.Pages
 {
     public class AddProductPageViewModel : INotifyPropertyChanged
     {
-        private ProductsViewModel pproducts { get; set; }
+        private ObservableCollection<Product> products { get; set; }
 
         private Product newProduct;
         public Product NewProduct
@@ -23,66 +23,6 @@ namespace LabWork6_7.Pages
             }
         }
 
-        public string Title
-        {
-            get
-            {
-                return NewProduct.Title;
-            }
-            set
-            {
-                NewProduct.Title = value;
-                OnPropertyChanged("Title");
-            }
-        }
-        public string Producer
-        {
-            get
-            {
-                return NewProduct.Producer;
-            }
-            set
-            {
-                NewProduct.Producer = value;
-                OnPropertyChanged("Producer");
-            }
-        }
-        public string Discription
-        {
-            get
-            {
-                return NewProduct.Discription;
-            }
-            set
-            {
-                NewProduct.Discription = value;
-                OnPropertyChanged("Discription");
-            }
-        }
-        public string Section
-        {
-            get
-            {
-                return NewProduct.Section;
-            }
-            set
-            {
-                NewProduct.Section = value;
-                OnPropertyChanged("Section");
-            }
-        }
-        public int Prise
-        {
-            get
-            {
-                return NewProduct.Prise;
-            }
-            set
-            {                
-                NewProduct.Prise = value;
-                OnPropertyChanged("Prise");
-            }
-        }
 
 
         private RelayCommand addNew;
@@ -92,8 +32,8 @@ namespace LabWork6_7.Pages
                 return addNew ?? (addNew = new RelayCommand(
                   obj =>
                   {
-                      pproducts.Products.Add(NewProduct);
-                      MessageBox.Show(pproducts.Products[pproducts.Products.Count - 1].Producer, "Ok");
+                      products.Add(NewProduct);
+                      NewProduct = new Product();                      
                   }
               ));
             }
@@ -102,7 +42,7 @@ namespace LabWork6_7.Pages
 
         public AddProductPageViewModel()
         {
-            pproducts = ProductsViewModel.GetInstance();
+            products = ProductsViewModel.GetInstance().Products;
             newProduct = new Product();
 
             NewProduct = newProduct;
