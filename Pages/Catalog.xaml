@@ -10,39 +10,43 @@
 
     <Page.Resources>
         <Style x:Key="RegularButton">
-            <Setter Property="ItemsControl.BorderBrush" Value="White" />
-            <Setter Property="ItemsControl.Background" Value="White" />
-            <Setter Property="ItemsControl.HorizontalContentAlignment" Value="Center" />
-            <Setter Property="ItemsControl.Margin" Value="50" />
-            <Setter Property="ItemsControl.Width" Value="100" />
-            <Setter Property="ItemsControl.Height" Value="100" />
+            <Setter Property="ItemsControl.Margin"  Value="5 5 5 5"/>
         </Style>
     </Page.Resources>
 
     <Grid Background="White">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
+            <RowDefinition  Height="*"/>
+            <RowDefinition  Height="13*"/>
         </Grid.RowDefinitions>
+        
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-        <Button x:Name="ListIcon" Grid.Column="0" Grid.Row="0" Style="{StaticResource RegularButton}">
-            <Image Source="C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork6_7(WPF)\Images\ListIcon.jpg"></Image>
-        </Button>
+            <StackPanel Grid.Column="0">
+                <Button Content="MechDrawingViewer" Style="{StaticResource RegularButton}"
+                        Command="{Binding SetMechDrawingViewer}"/>
+            </StackPanel>
 
-        <Button x:Name="DrowingIcon" Grid.Column="0" Grid.Row="1" Style="{StaticResource RegularButton}">
-            <Image Source="C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork6_7(WPF)\Images\DrowingIcon.svg"></Image>
-        </Button>
+            <StackPanel Grid.Column="1">
+                <Button Content="DrawingViewer" Style="{StaticResource RegularButton}"
+                        Command="{Binding SetDrawingViewer}"/>
+            </StackPanel>
 
-        <Button x:Name="PecilIcon" Grid.Column="1" Grid.Row="0" Style="{StaticResource RegularButton}">
-            <Image Source="C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork6_7(WPF)\Images\MechdrawingIcon.jpg"></Image>
-        </Button>
+            <StackPanel Grid.Column="2">
+                <Button Content="WritingViewer" Style="{StaticResource RegularButton}"
+                        Command="{Binding SetWritingViewer}"/>
+            </StackPanel>
+        </Grid>
 
-        <Button x:Name="MtchdroingIconIcon" Grid.Column="1" Grid.Row="1" Style="{StaticResource RegularButton}">
-            <Image Source="C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork6_7(WPF)\Images\PencilIcon.jpg"></Image>
-        </Button>
+        <Grid Grid.Row="1">
+            <Frame NavigationUIVisibility="Hidden"
+                   Margin="5 5 5 5"
+                   Content="{Binding CurrentPage}"/>
+        </Grid>
     </Grid>
 </Page>

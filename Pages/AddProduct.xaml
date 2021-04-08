@@ -42,15 +42,20 @@
                              Text="{Binding Path=NewProduct.Discription}"/>
                 </GroupBox>
 
-                <GroupBox Header="Категория">
-                    <TextBox Margin="3 3 3 3" BorderBrush="White"
-                             Text="{Binding Path=NewProduct.Section}"/>
-                </GroupBox>
-
                 <GroupBox Header="Цена">
                     <TextBox Margin="3 3 3 3" BorderBrush="White"
                              Text="{Binding Path=NewProduct.Prise}"/>
                 </GroupBox>
+
+                <ComboBox Margin="3 3 3 3" SelectedValue="{Binding Path=Selected}">
+                    <ComboBoxItem IsSelected="True">
+                        <TextBlock Text="Drawing" />
+                    </ComboBoxItem>
+                    
+                    <TextBlock Text="MechanicalDrawing" />
+
+                    <TextBlock Text="Writing" />
+                </ComboBox>
 
                 <Button Content="Ok" Margin="1 3 1 3"
                         Command="{Binding AddNew}"/>

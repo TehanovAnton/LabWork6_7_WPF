@@ -21,6 +21,8 @@ namespace LabWork6_7.Pages
         public Catalog()
         {
             InitializeComponent();
+
+            DataContext = new CatalogViewModel();
         }
     }
 }

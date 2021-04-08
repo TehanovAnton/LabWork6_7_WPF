@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -14,15 +15,15 @@ using System.Windows.Shapes;
 namespace LabWork6_7.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для ViewProducts.xaml
+    /// Логика взаимодействия для Viewer.xaml
     /// </summary>
-    public partial class ViewProducts : Page
+    public partial class Viewer : Page
     {
-        public ViewProducts()
+        public Viewer(ObservableCollection<Product> products)
         {
             InitializeComponent();
 
-            DataContext = new ViewProductModel();
+            DataContext = new ViewerModel(products);
         }
     }
 }

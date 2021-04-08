@@ -12,7 +12,6 @@ namespace LabWork6_7
     {
         private ProductsViewModel products;
 
-        private Page viewProductPage;
         private Page currentInfoPage;
         private Page addRroductPage;
         private Page myBasketPage;
@@ -25,15 +24,6 @@ namespace LabWork6_7
             {
                 currentInfoPage = value;
                 OnPropertyChanged("CurrentInfoPage");
-            }
-        }
-        public Page ViewProductPage
-        {
-            get { return viewProductPage; }
-            set
-            {
-                viewProductPage = value;
-                OnPropertyChanged("ViewProductPage");
             }
         }
         public Page AddProductPage
@@ -82,21 +72,6 @@ namespace LabWork6_7
         }
 
 
-        private RelayCommand setViewProductPage;
-        public RelayCommand SetViewProductPage
-        {
-            get
-            {
-                return setViewProductPage ?? (new RelayCommand(
-                        obj =>
-                        {
-                            CurrentInfoPage = ViewProductPage;
-                        }
-                    ));
-            }
-        }
-
-
         private RelayCommand setMyBasket;
         public RelayCommand SetMyBasket
         {
@@ -133,12 +108,10 @@ namespace LabWork6_7
 
             AddProductPage = new Pages.AddProduct();
             myBasketPage = new Pages.MyBasket();
-            viewProductPage = new Pages.ViewProducts();
             currentInfoPage = new Pages.Welcome();
             catatlogPage = new Pages.Catalog();
 
             AddProductPage = AddProductPage;
-            ViewProductPage = viewProductPage;
             MyBasketPage = myBasketPage;
             CurrentInfoPage = currentInfoPage;
             CatatlogPage = catatlogPage;

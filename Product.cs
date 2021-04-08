@@ -13,6 +13,7 @@ namespace LabWork6_7
         private string discription;
         private string section;
         private int prise;
+        private bool selected;
 
         public string Title
         {
@@ -74,6 +75,15 @@ namespace LabWork6_7
                 OnPropertyChanged("Prise");
             }
         }
+        public bool Selected
+        {
+            get { return selected; }
+            set
+            {
+                selected = value;
+                OnPropertyChanged("Selected");
+            }
+        }
 
         public Product(string title, string producer, string discription, string section, int prise)
         {
@@ -82,6 +92,7 @@ namespace LabWork6_7
             this.discription = discription;
             this.section = section;
             this.prise = prise;
+            this.selected = true;
         }
         public Product() { }
         public event PropertyChangedEventHandler PropertyChanged;

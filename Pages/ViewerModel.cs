@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace LabWork6_7.Pages
 {
-    class MyBasketViewModel : INotifyPropertyChanged
+    public class ViewerModel : INotifyPropertyChanged
     {
         private Product selectedProduct;
         public ObservableCollection<Product> products { get; set; }
@@ -83,38 +82,9 @@ namespace LabWork6_7.Pages
             }
         }
 
-
-        private RelayCommand deleteSelectedProduct;
-        public RelayCommand DeleteSelectedProduct 
-        { 
-            get {
-                return deleteSelectedProduct ?? (deleteSelectedProduct = new RelayCommand(
-                  obj =>
-                  {
-                      products.Remove(SelectedProduct);
-                  }
-              ));
-            }
-        }
-
-
-        private RelayCommand setCatalog;
-        public RelayCommand SetCatalog
+        public ViewerModel(ObservableCollection<Product> products)
         {
-            get
-            {
-                return setCatalog ?? (setCatalog = new RelayCommand(
-                  obj =>
-                  {
-                      
-                  }
-              ));
-            }
-        }
-
-        public MyBasketViewModel()
-        {
-            products = ProductsViewModel.GetInstance().Products;    
+            this.products = products;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

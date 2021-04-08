@@ -13,7 +13,7 @@
     <Compile Update="Pages\MyBasket.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Pages\ViewProducts.xaml.cs">
+    <Compile Update="Pages\Viewer.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Pages\Welcome.xaml.cs">
@@ -30,10 +30,16 @@
     <Page Update="Pages\MyBasket.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Pages\ViewProducts.xaml">
+    <Page Update="Pages\Viewer.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\Welcome.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ThemeDark.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ThemeLight.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

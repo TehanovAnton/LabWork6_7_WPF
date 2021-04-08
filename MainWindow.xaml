@@ -7,25 +7,12 @@
         mc:Ignorable="d"
         Title="wpf" Height="450" Width="800">
 
-    <Window.Resources>
-        <Style x:Key="MenuButton">
-            <Setter Property="ItemsControl.BorderBrush" Value="White"/>
-            <Setter Property="ItemsControl.Background" Value="White"/>
-            <Setter Property="ItemsControl.HorizontalContentAlignment" Value="left"/>
-            <Setter Property="ItemsControl.Margin" Value="14 3 3 3"/>
-            <Setter Property="ItemsControl.HorizontalAlignment" Value="Left"/>
-        </Style>
-
-        <Style x:Key="RegularGroupBox">
-            <Setter Property="ItemsControl.HorizontalAlignment" Value="Center"/>
-            <Setter Property="ItemsControl.BorderBrush" Value="Black"/>
-        </Style>
-    </Window.Resources>
-
-    <StackPanel Orientation="Vertical">
+    <StackPanel x:Name="StackPanelStyle" Orientation="Vertical"
+                Style="{DynamicResource StackPanelStyle}">
 
         <TextBlock Text="Интернет магазин концелярских товаров"
-                   HorizontalAlignment="Center"/>
+                   HorizontalAlignment="Center"
+                   />
 
         <Grid>
             <Grid.ColumnDefinitions>
@@ -36,7 +23,7 @@
             <StackPanel Margin="10 10 10 10" Grid.Column="0" Orientation="Vertical">
 
 
-                <Button x:Name="chancellery" Style="{StaticResource MenuButton}"
+                <Button x:Name="chancellery" Style="{DynamicResource ButtonStyle}"
                         Command="{Binding SetCatalogPage}">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="\Images\сhancelleryIcon.ico" Width="35" Height="35" Margin="0 0 5 0" />
@@ -44,7 +31,7 @@
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="addProduct" Style="{StaticResource MenuButton}"
+                <Button x:Name="addProduct" Style="{DynamicResource ButtonStyle}"
                         Command="{Binding SetAddProductPage}">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="\Images\AddProductIcon.ico" Width="35" Height="35" Margin="0 0 5 0" />
@@ -52,7 +39,7 @@
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="myBasket" Style="{StaticResource MenuButton}"
+                <Button x:Name="myBasket" Style="{DynamicResource ButtonStyle}"
                         Command="{Binding SetMyBasket}">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="\Images\MyBasketIcon.ico" Width="35" Height="35" Margin="0 0 5 0" />
@@ -60,36 +47,13 @@
                     </StackPanel>
                 </Button>
                 <!--выбор темы-->
-                <GroupBox Width="130" Header="Тема"
-                          Style="{StaticResource RegularGroupBox}">
-
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition />
-                            <ColumnDefinition />
-                        </Grid.ColumnDefinitions>
-
-                        <RadioButton Grid.Column="0" Content="light" Margin="0 5 5 5" />
-                        <RadioButton Grid.Column="1" Content="black" Margin="0 5 10 5" />
-                    </Grid>
-                </GroupBox>
-
-                <!--выбор языка-->
-                <GroupBox Width="130" Header="Язык"
-                          Style="{StaticResource RegularGroupBox}">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition />
-                            <ColumnDefinition />
-                        </Grid.ColumnDefinitions>
-
-                        <RadioButton Grid.Column="0" Content="Ru" Margin="0 5 5 5" />
-                        <RadioButton Grid.Column="1" Content="Eng" Margin="0 5 10 5" />
-                    </Grid>
+                <GroupBox Width="130" Header="Тема">
+                    <ComboBox x:Name="styleBox" Grid.Column="1" Grid.Row="3" Margin="4 4 4 4" />
                 </GroupBox>
             </StackPanel>
            
             <Frame 
+                x:Name="frame"
                 Grid.Column="1"
                 NavigationUIVisibility="Hidden" 
                 Background="White"

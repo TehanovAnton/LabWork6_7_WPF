@@ -1,0 +1,41 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:LabWork6_7">
+
+    <Style x:Key="TextBlockStyle" TargetType="TextBlock">
+        <Setter Property="Background" Value="Gray" />
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+
+    <Style x:Key="WindowStyle" TargetType="Window">
+        <Setter Property="Background" Value="Gray" />
+    </Style>
+
+    <Style x:Key="ButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="Gray" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="BorderBrush" Value="White" />
+        <Setter Property="Control.FontFamily" Value="Calibri Bold" />
+        <Setter Property="Control.Margin" Value="4 4 4 4" />
+    </Style>
+
+    <Style x:Key="StackPanelStyle" TargetType="StackPanel">
+        <Setter Property="Background" Value="Black" />
+    </Style>
+
+
+
+
+    <Style x:Key="MenuButton">
+        <Setter Property="ItemsControl.BorderBrush" Value="White"/>
+        <Setter Property="ItemsControl.Background" Value="Black"/>
+        <Setter Property="ItemsControl.HorizontalContentAlignment" Value="left"/>
+        <Setter Property="ItemsControl.Margin" Value="14 3 3 3"/>
+        <Setter Property="ItemsControl.HorizontalAlignment" Value="Left"/>
+    </Style>
+
+    <Style x:Key="RegularGroupBox">
+        <Setter Property="ItemsControl.HorizontalAlignment" Value="Center"/>
+        <Setter Property="ItemsControl.BorderBrush" Value="Black"/>
+    </Style>
+</ResourceDictionary>

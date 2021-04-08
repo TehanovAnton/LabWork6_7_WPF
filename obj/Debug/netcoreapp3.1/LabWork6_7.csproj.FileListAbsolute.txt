@@ -40,11 +40,14 @@ C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решени�
 C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork6_7(WPF)\obj\Debug\netcoreapp3.1\Pages\Welcome.baml
 C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork6_7(WPF)\obj\Debug\netcoreapp3.1\Pages\AddProduct.g.cs
 C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork6_7(WPF)\obj\Debug\netcoreapp3.1\Pages\AddProduct.baml
-C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork6_7(WPF)\obj\Debug\netcoreapp3.1\Pages\ViewProducts.g.cs
-C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork6_7(WPF)\obj\Debug\netcoreapp3.1\Pages\ViewProducts.baml
 C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork6_7(WPF)\obj\Debug\netcoreapp3.1\Pages\MyBasket.g.cs
 C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork6_7(WPF)\obj\Debug\netcoreapp3.1\Pages\MyBasket.baml
 C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork6_7(WPF)\obj\Debug\netcoreapp3.1\Pages\Catalog.g.cs
 C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork6_7(WPF)\obj\Debug\netcoreapp3.1\Pages\Catalog.baml
 C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork6_7(WPF)\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork6_7(WPF)\obj\Debug\netcoreapp3.1\LabWork6_7.csproj.CopyComplete
+C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork6_7(WPF)\obj\Debug\netcoreapp3.1\App.baml
+C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork6_7(WPF)\obj\Debug\netcoreapp3.1\ThemeDark.baml
+C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork6_7(WPF)\obj\Debug\netcoreapp3.1\ThemeLight.baml
+C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork6_7(WPF)\obj\Debug\netcoreapp3.1\Pages\Viewer.g.cs
+C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork6_7(WPF)\obj\Debug\netcoreapp3.1\Pages\Viewer.baml
